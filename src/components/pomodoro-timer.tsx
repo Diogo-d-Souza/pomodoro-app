@@ -5,6 +5,9 @@ import Timer from './timer';
 
 interface PomodoroTimerProps {
   pomodoroTime: number;
+  shortRestTime: number;
+  longRestTime: number;
+  cycles: number;
 }
 export default function PomodoroTimer(
   props: PomodoroTimerProps,
@@ -18,7 +21,14 @@ export default function PomodoroTimer(
     <div className="pomodoro">
       <h2>You are: working</h2>
       <Timer mainTime={mainTime} />
-      <Button text="test" onClick={() => console.log(1)}></Button>
+      <div className="controls">
+        <Button text="test" onClick={() => console.log(1)}></Button>
+        <Button text="test" onClick={() => console.log(1)}></Button>
+        <Button text="test" onClick={() => console.log(1)}></Button>
+      </div>
+      <div className="details">
+        <p>Testing</p>
+      </div>
     </div>
   );
 }
